@@ -1,0 +1,39 @@
+{
+  "name": "bugzilla-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets agents query Firefox's Bugzilla (bugzilla.mozilla.org) for bugs, comments, history, attachments, and product metadata.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "bugzilla-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bugzilla",
+    "firefox",
+    "mozilla"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^7.0.2"
+  }
+}
